@@ -25,8 +25,7 @@ def main():
         fields = ['name', 'age', 'job']
         wtiter = csv.DictWriter(f, fields, delimiter=';')
         wtiter.writeheader()
-        for user in list_people:
-            wtiter.writerow(user)
+        wtiter.writerows(list_people)
 
 if __name__ == "__main__":
     main()

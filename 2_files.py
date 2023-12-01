@@ -15,10 +15,9 @@ def main():
     with open('referat.txt', 'r', encoding='utf-8') as f, open('referat2.txt', 'w', encoding='utf-8') as new_f:
       content = f.read() # прочитал текст в переменную
       len_content = len(content) # посчитал длину получившегося текста
-      count_row = len(content.split()) # посчитал количество слов
-      for row in content: 
-        row = row.replace('.', '!') # заменил точки на восклицательный знак
-        new_f.write(row) # сохранил результат в файле referat2.txt
+      content = content.replace('.', '!') # заменил точки на восклицательный знак
+      count_char = len(content.split()) # посчитал количество слов
+      new_f.write(content) # сохранил результат в файле referat2.txt
 
 if __name__ == "__main__":
     main()
